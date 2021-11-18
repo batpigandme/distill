@@ -162,9 +162,9 @@ html_for_articles <- function(articles, caption = NULL, categories = FALSE, cate
 
     if (!is.null(article$preview))
       if (article_index <= 5)
-        preview <- img(src = article$preview)
+        preview <- img(src = article$preview, `aria-hidden` = "true")
       else
-        preview <- img(`data-src` = article$preview)
+        preview <- img(`data-src` = article$preview, `aria-hidden` = "true")
     else
       preview <- NULL
 
